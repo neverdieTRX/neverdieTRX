@@ -1,0 +1,7 @@
+package org.Macro;
+
+public class UnitProductionManager {
+
+	@Inject
+	GameListener gameListener;
+}

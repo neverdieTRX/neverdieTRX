@@ -1,0 +1,13 @@
+package org.Macro;
+
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+@ApplicationScoped
+public class ProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+}

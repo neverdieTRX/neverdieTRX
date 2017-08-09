@@ -1,0 +1,4 @@
+org\Macro\BasicMacroManager.class
+org\Macro\BuildingProductionManager.class
+org\Macro\common\OrderHandler.class
+org\Macro\UnitProductionManager.class

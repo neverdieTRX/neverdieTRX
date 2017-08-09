@@ -1,0 +1,14 @@
+package org.Info;
+
+import javax.inject.Inject;
+
+import org.TRX.integration.SimpleService;
+
+public class CurrentGameInfo {
+
+	@Inject
+	SimpleService simpleService;
+	
+	
+	
+}

@@ -1,0 +1,10 @@
+1501946359132	Rename type 'TestBot1'
+1501946655582	Rename type 'BaseGame'
+1502037127794	Delete element
+1502037329663	Encapsulate field 'timeOfOrder'
+1502037335239	Encapsulate field 'orderType'
+1502037523732	Rename type 'Order'
+1502037629962	Encapsulate field 'worker'
+1502039306019	Delete element
+1502040226725	Encapsulate field 'createdUnit'
+1502040752577	Rename method 'getunitType'

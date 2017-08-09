@@ -1,0 +1,15 @@
+package org.TRX.integration;
+
+import TRX.TRX_Bot.MyBroodwar;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}

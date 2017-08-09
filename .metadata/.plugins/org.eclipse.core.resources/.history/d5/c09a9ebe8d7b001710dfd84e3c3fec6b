@@ -1,0 +1,30 @@
+package org.Macro;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
+import org.Macro.common.AmountOfBuildings;
+import org.TRX.bwapi.Facade.GameListener;
+
+import bwapi.UnitType;
+
+@ApplicationScoped
+public class ProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+	@Inject
+	AmountOfBuildings amountOfBuildings;
+
+	public void update() {
+		this.amountOfBuildings.getAmountOfBuildingsToBe().forEach((key, value) -> {
+			this.buildProductionFacility(key, value);
+		});
+	}
+
+	private void buildProductionFacility(UnitType unitType, Integer amount) {
+
+	}
+
+}

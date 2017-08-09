@@ -1,0 +1,15 @@
+package org.Macro;
+
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+public class UnitProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+	public UnitProductionManager() {
+		
+	}
+}

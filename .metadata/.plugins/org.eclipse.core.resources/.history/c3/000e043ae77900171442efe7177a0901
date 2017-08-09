@@ -1,0 +1,14 @@
+package org.Info;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.TRX.bwapi.Facade.TestBot1;
+
+@Named
+public class CurrentGameInfo {
+
+	@Inject
+	TestBot1 tb;
+	
+}

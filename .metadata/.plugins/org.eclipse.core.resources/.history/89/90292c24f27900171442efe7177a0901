@@ -1,0 +1,11 @@
+package org.Info;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.TRX.bwapi.Facade.BaseGame;
+
+@Named
+public class CurrentGameInfo {
+
+}

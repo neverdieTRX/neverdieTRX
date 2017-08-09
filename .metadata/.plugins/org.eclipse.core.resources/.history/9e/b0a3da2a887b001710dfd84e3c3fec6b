@@ -1,0 +1,14 @@
+package org.Macro.common;
+
+import java.util.List;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import org.TRX.bwapi.Facade.Utils.BuildOrder;
+
+@ApplicationScoped
+public class OrderHandler {
+
+	private List<BuildOrder> currentOrders;
+
+}

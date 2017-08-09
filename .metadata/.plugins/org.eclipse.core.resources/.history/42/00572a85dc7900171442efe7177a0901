@@ -1,0 +1,15 @@
+package org.TRX.integration;
+
+import javax.inject.Inject;
+
+/**
+ * Hello world!
+ *
+ */
+
+
+public class App 
+{
+	
+	
+}

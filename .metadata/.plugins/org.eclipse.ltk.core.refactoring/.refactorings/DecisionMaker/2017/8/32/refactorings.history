@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;basicProductionManager&apos; in &apos;org.DecisionMaker.DecisionMaker&apos; to &apos;basicMacroManager&apos;&#x0D;&#x0A;- Original project: &apos;DecisionMaker&apos;&#x0D;&#x0A;- Original element: &apos;org.DecisionMaker.DecisionMaker.basicProductionManager&apos;&#x0D;&#x0A;- Renamed element: &apos;org.DecisionMaker.DecisionMaker.basicMacroManager&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;basicProductionManager&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java&lt;org.DecisionMaker{DecisionMaker.java[DecisionMaker^basicProductionManager" name="basicMacroManager" references="true" setter="false" stamp="1502120270417" textual="false" version="1.0"/>
+</session>

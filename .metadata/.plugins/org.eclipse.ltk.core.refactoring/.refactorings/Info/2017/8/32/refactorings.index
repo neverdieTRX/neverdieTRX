@@ -1,0 +1,4 @@
+1502209510687	Encapsulate field 'productionPlace'
+1502209723856	Encapsulate field 'startBaseLocation'
+1502293648444	Rename method 'onUnitCreate'
+1502293659997	Rename local variable 'onUnitCreateEvent'

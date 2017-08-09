@@ -1,0 +1,34 @@
+package org.DecisionMaker;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.Observes;
+import javax.inject.Inject;
+
+import org.Info.CurrentGameInfo;
+import org.Macro.BasicMacroManager;
+import org.TRX.bwapi.Facade.GameListener;
+import org.TRX.bwapi.Facade.Events.OnFrameEvent;
+
+@ApplicationScoped
+public class DecisionMaker {
+
+	@Inject
+	private GameListener gm;
+
+	@Inject
+	private CurrentGameInfo currentGameInfo;
+
+	@Inject
+	BasicMacroManager basicMacroManager;
+
+	public void run() {
+		this.gm.run();
+		this.currentGameInfo.setProductionPlace();
+
+	}
+
+	public void onFrame(@Observes OnFrameEvent onFrameEvent) {
+		this.basicMacroManager.update();
+	}
+
+}

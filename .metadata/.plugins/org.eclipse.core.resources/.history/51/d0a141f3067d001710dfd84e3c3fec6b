@@ -1,0 +1,19 @@
+package org.Macro;
+
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+import bwapi.Unit;
+
+public class UnitProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+	private List<Unit> commandCenters;
+
+	public UnitProductionManager() {
+
+	}
+}

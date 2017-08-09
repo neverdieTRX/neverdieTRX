@@ -1,0 +1,5 @@
+package org.TRX.bwapi.Facade.Events;
+
+public class OnUnitCreateEvent {
+
+}

@@ -1,0 +1,50 @@
+package org.TRX.bwapi.Facade.Utils;
+
+import bwapi.Unit;
+
+/**
+ * Not an 'Build order' in a convetional sense but more a singel Order that was
+ * given to an worker.
+ * 
+ * @author Turox
+ *
+ */
+public class BuildOrder {
+
+	// get framecount game.getFrameCount();
+
+	private int timeOfOrder;
+	private OrderType orderType;
+	private Unit worker;
+
+	public BuildOrder(int timeOfOrder, OrderType orderType, Unit worker) {
+		this.timeOfOrder = timeOfOrder;
+		this.orderType = orderType;
+		this.setWorker(worker);
+	}
+
+	public int getTimeOfOrder() {
+		return timeOfOrder;
+	}
+
+	public void setTimeOfOrder(int timeOfOrder) {
+		this.timeOfOrder = timeOfOrder;
+	}
+
+	public OrderType getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(OrderType orderType) {
+		this.orderType = orderType;
+	}
+
+	public Unit getWorker() {
+		return worker;
+	}
+
+	public void setWorker(Unit worker) {
+		this.worker = worker;
+	}
+
+}

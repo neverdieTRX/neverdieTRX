@@ -1,0 +1,20 @@
+package org.Info;
+
+import javax.inject.Named;
+
+import bwta.BaseLocation;
+
+@Named
+public class CurrentGameInfo {
+
+	private BaseLocation productionPlace;
+
+	public BaseLocation getProductionPlace() {
+		return productionPlace;
+	}
+
+	public void setProductionPlace(BaseLocation productionPlace) {
+		this.productionPlace = productionPlace;
+	}
+
+}

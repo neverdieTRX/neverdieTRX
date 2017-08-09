@@ -1,0 +1,17 @@
+1502120253026	Rename type 'BasicProductionManager'
+1502121023650	Encapsulate field 'currentOrders'
+1502121310629	Rename method 'addCurrentOrder'
+1502122443963	Delete element
+1502122509758	Encapsulate field 'amountOfBuildings'
+1502122987570	Rename field 'amountOfBuildings'
+1502123013262	Rename method 'getAmountOfBuildings'
+1502123020741	Rename method 'getAmountOfBuilding'
+1502123026320	Rename method 'setAmountOfBuilding'
+1502123297011	Encapsulate field 'amountOfBuildingsCurrent'
+1502208687475	Move compilation unit
+1502285151937	Rename type 'ProductionManager'
+1502286743460	Rename local variable 'createdUnit'
+1502287089728	Rename field 'productionManager'
+1502287096187	Rename field 'BuildingProductionManager'
+1502293573315	Rename method 'onUnitCreate'
+1502293602889	Rename local variable 'onUnitCreateEvent'

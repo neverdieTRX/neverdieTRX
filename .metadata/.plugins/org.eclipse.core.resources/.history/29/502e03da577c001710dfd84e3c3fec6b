@@ -1,0 +1,44 @@
+package org.Info;
+
+import java.util.Map;
+
+import javax.enterprise.context.ApplicationScoped;
+
+import bwapi.UnitType;
+
+@ApplicationScoped
+public class AmountOfBuildings {
+
+	private Map<UnitType, Integer> amountOfBuildingsToBe;
+
+	private Map<UnitType, Integer> amountOfBuildingsCurrent;
+
+	public Map<UnitType, Integer> getAmountOfBuildingsToBe() {
+		return amountOfBuildingsToBe;
+	}
+
+	private void onUnitCreate(@Observes){
+		
+	}
+
+	public Integer getAmountOfBuildingToBe(UnitType unitType) {
+		return this.amountOfBuildingsToBe.get(unitType);
+	}
+
+	public Integer getAmountOfBuildingCurrent(UnitType unitType) {
+		return this.amountOfBuildingsCurrent.get(unitType);
+	}
+
+	public void setAmountOfBuildingToBe(UnitType unitType, Integer amount) {
+		this.amountOfBuildingsToBe.put(unitType, amount);
+	}
+
+	public Map<UnitType, Integer> getAmountOfBuildingsCurrent() {
+		return amountOfBuildingsCurrent;
+	}
+
+	public void setAmountOfBuildingCurrent(UnitType unitType, Integer amount) {
+		this.amountOfBuildingsCurrent.put(unitType, amount);
+	}
+
+}

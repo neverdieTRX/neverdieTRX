@@ -1,0 +1,27 @@
+
+package TRX.TRX_Bot;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
+/**
+ * Hello world!
+ *
+ */
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println("Startpoint");
+		Injector injector = Guice.createInjector(new BillingModule());
+
+		/*
+		 * Now that we've got the injector, we can build objects.
+		 */
+		BillingService billingService = injector.getInstance(BillingService.class);
+	}
+
+	public void init() {
+
+	}
+}

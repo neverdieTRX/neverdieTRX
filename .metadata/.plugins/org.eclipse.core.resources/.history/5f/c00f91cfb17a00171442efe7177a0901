@@ -1,0 +1,28 @@
+package org.DecisionMaker;
+
+
+import org.Macro.BasicProductionManager;
+import org.TRX.bwapi.Facade.GameListener;
+import org.TRX.bwapi.Facade.Events.OnFrameEvent;
+
+@Singleton
+public class DecisionMaker {
+
+	@Inject
+	BasicProductionManager basicProductionManager;
+
+	@Inject
+	public DecisionMaker(GameListener gameListener) {
+		System.out.println("this is the decisionmaker");
+		System.out.println(gm.toString());
+	}
+
+	public void run() {
+		this.gm.run();
+	}
+
+	public void onFrame(@Observes OnFrameEvent onFrameEvent) {
+		System.out.println("onFrame");
+	}
+
+}

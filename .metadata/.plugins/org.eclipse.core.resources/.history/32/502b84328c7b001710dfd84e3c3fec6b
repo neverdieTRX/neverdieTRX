@@ -1,0 +1,8 @@
+package org.Macro.common;
+
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
+public class AmountOfBuildings {
+
+}

@@ -1,0 +1,5 @@
+package org.Info;
+
+public class CurrentGameInfo {
+
+}

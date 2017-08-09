@@ -1,0 +1,55 @@
+package org.Macro;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
+import org.Info.AmountOfBuildings;
+import org.Info.CurrentGameInfo;
+import org.Macro.common.OrderHandler;
+import org.TRX.bwapi.Facade.GameListener;
+import org.TRX.bwapi.Facade.manager.BuildingManager;
+import org.TRX.bwapi.Facade.manager.WorkerManager;
+
+import bwapi.UnitType;
+
+@ApplicationScoped
+public class ProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+	@Inject
+	WorkerManager workerManager;
+
+	@Inject
+	OrderHandler orderHandler;
+
+	@Inject
+	BuildingManager buildingManager;
+
+	@Inject
+	AmountOfBuildings amountOfBuildings;
+
+	@Inject
+	CurrentGameInfo currentGameInfo;
+
+	// todo auch mit timer sonst läufts langsam
+	public void update() {
+		System.out.println("wird aufgerufen");
+		this.amountOfBuildings.getAmountOfBuildingsToBe().forEach((key, value) -> {
+			if (this.amountOfBuildings.getAmountOfBuildingCurrent(key) < value) {
+				System.out.println("soll bauen");
+				this.buildProductionFacility(key, value);
+			}
+		});
+	}
+
+	private void buildProductionFacility(UnitType unitType, Integer amount) {
+		if (this.amountOfBuildings.getAmountOfBuildingCurrent(unitType) < amount) {
+			this.buildingManager.buildBuilding(unitType, this.currentGameInfo.getProductionPlace().getTilePosition(),
+					this.workerManager.getFreeWorker());
+			BuildOrder newOrder = new BuildOrder();
+		}
+	}
+
+}

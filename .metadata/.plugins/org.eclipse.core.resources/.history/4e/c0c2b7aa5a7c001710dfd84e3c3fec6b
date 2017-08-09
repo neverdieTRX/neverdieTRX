@@ -1,0 +1,60 @@
+package org.Info;
+
+import java.util.Map;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.event.Observes;
+
+import org.TRX.bwapi.Facade.Events.OnUnitCreateEvent;
+
+import bwapi.Unit;
+import bwapi.UnitType;
+
+@ApplicationScoped
+public class AmountOfBuildings {
+
+	private Map<UnitType, Integer> amountOfBuildingsToBe;
+
+	private Map<UnitType, Integer> amountOfBuildingsCurrent;
+
+	public Map<UnitType, Integer> getAmountOfBuildingsToBe() {
+		return amountOfBuildingsToBe;
+	}
+
+	public void onUnitCreate(@Observes OnUnitCreateEvent onUnitCreateEvent) {
+		Unit createdUnit = onUnitCreateEvent.getCreatedUnit();
+		if (createdUnit.getType().isBuilding() == false) {
+			return;
+		}
+		System.out.println("in amount of building on unitcreate");
+		if (this.amountOfBuildingsCurrent.containsKey(createdUnit.getType())) {
+
+			this.amountOfBuildingsCurrent.put(createdUnit.getType(),
+					this.amountOfBuildingsCurrent.get(createdUnit.getType()) + 1);
+		}
+		this.amountOfBuildingsCurrent.forEach((key, value) -> {
+			System.out.println(key + " " + value);
+		});
+	}
+
+	public Integer getAmountOfBuildingToBe(UnitType unitType) {
+		return this.amountOfBuildingsToBe.get(unitType);
+	}
+
+	public Integer getAmountOfBuildingCurrent(UnitType unitType) {
+		return this.amountOfBuildingsCurrent.get(unitType);
+	}
+
+	public void setAmountOfBuildingToBe(UnitType unitType, Integer amount) {
+		this.amountOfBuildingsToBe.put(unitType, amount);
+	}
+
+	public Map<UnitType, Integer> getAmountOfBuildingsCurrent() {
+		return amountOfBuildingsCurrent;
+	}
+
+	public void setAmountOfBuildingCurrent(UnitType unitType, Integer amount) {
+		this.amountOfBuildingsCurrent.put(unitType, amount);
+	}
+
+}

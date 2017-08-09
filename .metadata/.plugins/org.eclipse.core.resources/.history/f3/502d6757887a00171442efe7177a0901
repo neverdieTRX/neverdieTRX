@@ -1,0 +1,24 @@
+package org.DecisionMaker;
+
+import javax.inject.Inject;
+
+import org.Macro.BasicProductionManager;
+
+public class DecisionMaker {
+
+	@Inject
+	BasicProductionManager basicProductionManager;
+
+	DecisionMaker() {
+
+	}
+
+	public void run() {
+
+	}
+
+	public void onFrame() {
+		
+	}
+
+}

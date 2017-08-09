@@ -1,0 +1,22 @@
+package org.Macro;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+@ApplicationScoped
+public class ProductionManager {
+
+	@Inject
+	GameListener gameListener;
+
+	public void update() {
+		this.testMarineExpand();
+	}
+
+	private void buildProductionFacility(UnitType unitType, Integer amount) {
+
+	}
+
+}

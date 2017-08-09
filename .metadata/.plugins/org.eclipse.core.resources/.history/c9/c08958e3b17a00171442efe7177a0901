@@ -1,0 +1,21 @@
+
+package TRX.TRX_Bot;
+
+import org.DecisionMaker.DecisionMaker;
+
+/**
+ * Hello world!
+ *
+ */
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println("Startpoint");
+
+	}
+
+	public void init() {
+
+	}
+}

@@ -1,0 +1,18 @@
+package org.Info;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.TRX.integration.SimpleService;
+
+@Named
+public class CurrentGameInfo {
+
+	@Inject
+	SimpleService simpleService;
+	
+	public String hello(){
+		return this.simpleService.hello();
+	}
+	
+}

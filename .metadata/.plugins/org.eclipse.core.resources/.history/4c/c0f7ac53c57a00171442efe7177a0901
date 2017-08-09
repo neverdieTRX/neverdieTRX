@@ -1,0 +1,26 @@
+package org.TRX.bwapi.Facade.Utils;
+
+public class Order {
+
+	// get framecount game.getFrameCount();
+
+	private int timeOfOrder;
+	private OrderType orderType;
+
+	public int getTimeOfOrder() {
+		return timeOfOrder;
+	}
+
+	public void setTimeOfOrder(int timeOfOrder) {
+		this.timeOfOrder = timeOfOrder;
+	}
+
+	public OrderType getOrderType() {
+		return orderType;
+	}
+
+	public void setOrderType(OrderType orderType) {
+		this.orderType = orderType;
+	}
+
+}

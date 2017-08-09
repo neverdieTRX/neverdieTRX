@@ -1,0 +1,14 @@
+package org.TRX.bwapi.Facade.manager;
+
+import bwapi.Unit;
+
+public class WorkerManager {
+
+	@Inject
+	GameListener gameListener;
+	
+	public Unit getFreeWorker() {
+
+	}
+
+}

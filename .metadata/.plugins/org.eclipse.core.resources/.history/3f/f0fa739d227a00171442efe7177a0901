@@ -1,0 +1,30 @@
+package org.TRX.bwapi.Facade.manager;
+
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+import bwapi.Unit;
+import bwapi.UnitType;
+
+public class WorkerManager {
+
+	@Inject
+	GameListener gameListener;
+
+	public Unit getFreeWorker() {
+		List<Unit> myUnits = this.gameListener.self.getUnits();
+		for (Unit myUnit : myUnits) {
+			
+			if(myUnit.getType() == UnitType.Terran_SCV){
+			if (myUnit.isConstructing() == false && myUnit.isRepairing() == false) {
+				return myUnit;
+			}
+			}
+		}
+		return myUnits.get(0);
+	}
+
+}

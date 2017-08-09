@@ -1,0 +1,82 @@
+package org.TRX.bwapi.Facade.manager;
+
+import javax.inject.Inject;
+
+import org.TRX.bwapi.Facade.GameListener;
+
+import bwapi.TilePosition;
+import bwapi.Unit;
+import bwapi.UnitType;
+
+public class BuildingManager {
+
+	@Inject
+	GameListener gameListener;
+
+	public void buildBuilding(UnitType t, TilePosition destination, Unit myUnit) {
+
+		if (myUnit != null && destination != null) {
+
+			TilePosition buildTile = getBuildTile(myUnit, t, destination);
+			if (buildTile != null) {
+				myUnit.build(t, buildTile);
+			}
+		}
+	}
+	
+	private TilePosition getBuildTile(Unit builder, UnitType buildingType, TilePosition aroundTile) {
+		TilePosition ret = null;
+		int maxDist = 3;
+		int stopDist = 80;
+
+		// Refinery, Assimilator, Extractor
+		if (buildingType.isRefinery()) {
+			for (Unit n : this.gameListener.game.neutral().getUnits()) {
+				if ((n.getType() == UnitType.Resource_Vespene_Geyser)
+						&& (Math.abs(n.getTilePosition().getX() - aroundTile.getX()) < stopDist)
+						&& (Math.abs(n.getTilePosition().getY() - aroundTile.getY()) < stopDist))
+					return n.getTilePosition();
+			}
+		}
+
+		while ((maxDist < stopDist) && (ret == null)) {
+			for (int i = aroundTile.getX() - maxDist; i <= aroundTile.getX() + maxDist; i = i + 2) {
+				for (int j = aroundTile.getY() - maxDist; j <= aroundTile.getY() + maxDist; j = j + 2) {
+					if (this.gameListener.game.canBuildHere(new TilePosition(i, j), buildingType)) {
+						// units that are blocking the tile
+						boolean unitsInWay = false;
+						for (Unit u : this.gameListener.game.getAllUnits()) {
+							if (u.getID() == builder.getID())
+								continue;
+							if ((Math.abs(u.getTilePosition().getX() - i) < 4)
+									&& (Math.abs(u.getTilePosition().getY() - j) < 4))
+								unitsInWay = true;
+						}
+						if (!unitsInWay) {
+							return new TilePosition(i, j);
+						}
+						// creep for Zerg
+						if (buildingType.requiresCreep()) {
+							boolean creepMissing = false;
+							for (int k = i; k <= i + buildingType.tileWidth(); k++) {
+								for (int l = j; l <= j + buildingType.tileHeight(); l++) {
+									if (!this.gameListener.game.hasCreep(k, l))
+										creepMissing = true;
+									break;
+								}
+							}
+							if (creepMissing)
+								continue;
+						}
+					}
+				}
+			}
+			maxDist += 2;
+		}
+
+		if (ret == null)
+			this.gameListener.game.printf("Unable to find suitable build position for " + buildingType.toString());
+		return ret;
+	}
+
+}

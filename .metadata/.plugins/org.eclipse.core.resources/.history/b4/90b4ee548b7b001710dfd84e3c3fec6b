@@ -1,0 +1,6 @@
+package org.Macro.common;
+
+@ApplicationScope
+public class AmountOfBuildings {
+
+}
