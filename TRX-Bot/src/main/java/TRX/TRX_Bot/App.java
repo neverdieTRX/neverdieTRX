@@ -11,7 +11,6 @@ import org.jboss.weld.environment.se.WeldContainer;
  */
 
 public class App {
-
 	public static void main(String[] args) {
 		System.out.println("Startpoint");
 		Weld weld = new Weld();
@@ -19,6 +18,5 @@ public class App {
 		DecisionMaker decisionMaker = container.instance().select(DecisionMaker.class).get();
 		decisionMaker.run();
 		weld.shutdown();
-
 	}
 }

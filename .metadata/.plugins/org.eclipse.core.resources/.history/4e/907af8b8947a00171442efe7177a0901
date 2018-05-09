@@ -1,6 +1,0 @@
-package TRX.TRX_Bot;
-
-@Service
-public class Starter {
-
-}

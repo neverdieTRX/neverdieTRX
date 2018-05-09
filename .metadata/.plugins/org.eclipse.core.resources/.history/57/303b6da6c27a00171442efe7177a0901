@@ -1,9 +1,0 @@
-package org.Macro;
-
-import javax.inject.Inject;
-
-public class MakroController {
-	@Inject
-	BasicProductionManager basicProductionManager;
-
-}

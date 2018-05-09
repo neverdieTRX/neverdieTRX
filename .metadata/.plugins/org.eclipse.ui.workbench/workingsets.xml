@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1525463944110_3" label="TRX-Bot" name="TRX-Bot">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TRX-Bot" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TRX-integration" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TRX-bwapi-Facade" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/DecisionMaker" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Info" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Macro" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ArmyMovement" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Micro" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BWMIRROR" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1501873548057_0" label="Window Working Set" name="Aggregate for window 1501873548057"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1501876342068_1" label="Window Working Set" name="Aggregate for window 1501876342068"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1501877533118_2" label="Window Working Set" name="Aggregate for window 1501877533118"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1525846118429_4" label="Window Working Set" name="Aggregate for window 1525846118429"/>
 </workingSetManager>

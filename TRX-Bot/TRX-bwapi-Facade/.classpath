@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/bwmirror_v2_5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

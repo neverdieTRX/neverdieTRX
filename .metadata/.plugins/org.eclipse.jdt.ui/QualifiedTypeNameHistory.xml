@@ -1,21 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.TRX.bwapi.facade.MyBroodwar"/>
-<fullyQualifiedTypeName name="org.TRX.integration.SimpleService"/>
-<fullyQualifiedTypeName name="javax.inject.Named"/>
-<fullyQualifiedTypeName name="org.TRX.bwapi.Facade.TestBot1"/>
-<fullyQualifiedTypeName name="org.TRX.bwapi.Facade.GameListener"/>
-<fullyQualifiedTypeName name="bwapi.TilePosition"/>
-<fullyQualifiedTypeName name="bwapi.Unit"/>
-<fullyQualifiedTypeName name="bwapi.UnitType"/>
-<fullyQualifiedTypeName name="java.awt.Event"/>
-<fullyQualifiedTypeName name="javax.enterprise.event.Event"/>
-<fullyQualifiedTypeName name="javax.faces.bean.ApplicationScoped"/>
-<fullyQualifiedTypeName name="org.TRX.bwapi.Facade.manager.BuildingManager"/>
-<fullyQualifiedTypeName name="javax.inject.Singleton"/>
-<fullyQualifiedTypeName name="javax.enterprise.context.ApplicationScoped"/>
-<fullyQualifiedTypeName name="javax.inject.Inject"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="org.TRX.bwapi.Facade.Utils.Order"/>
-<fullyQualifiedTypeName name="bwapi.Order"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>

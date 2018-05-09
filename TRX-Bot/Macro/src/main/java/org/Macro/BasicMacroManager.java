@@ -18,7 +18,6 @@ import bwapi.UnitType;
  * handeling upgrades and exansions
  * 
  * @author Turox
- *
  */
 @Named
 public class BasicMacroManager {
@@ -61,20 +60,17 @@ public class BasicMacroManager {
 	}
 
 	private void handelSupply() {
-		// System.out.println(this.getAmountOfOrders(UnitType.Terran_Supply_Depot));
-
-		if (this.orderHandler.getAmountOfOrders(UnitType.Terran_Supply_Depot) < 1) {
-			if ((this.gameListener.getSelf().supplyTotal() - this.gameListener.getSelf().supplyUsed() < 8)
-					&& this.gameListener.getSelf().minerals() >= 100
-					&& this.gameListener.getSelf().supplyUsed() < 400) {
-				Unit myUnit = this.workerManager.getFreeWorker();
-				this.buildingManager.buildBuilding(UnitType.Terran_Supply_Depot,
-						this.gameListener.getSelf().getStartLocation(), myUnit);
-				System.out.println("myUnit: " + myUnit);
-				// MyUnit ist null später irgendwie
-				this.orderHandler.addOrder(
-						new BuildOrder(gameListener.getGame().getFrameCount(), UnitType.Terran_Supply_Depot, myUnit));
-			}
+		if (this.orderHandler.getAmountOfOrders(UnitType.Terran_Supply_Depot) >= 1) {
+			return;
+		}
+		if ((this.gameListener.getSelf().supplyTotal() - this.gameListener.getSelf().supplyUsed() < 8)
+				&& this.gameListener.getSelf().minerals() >= 100
+				&& this.gameListener.getSelf().supplyUsed() < 400) {
+			Unit myUnit = this.workerManager.getFreeWorker();
+			this.buildingManager.buildBuilding(UnitType.Terran_Supply_Depot,
+					this.gameListener.getSelf().getStartLocation(), myUnit);
+			this.orderHandler.addOrder(
+					new BuildOrder(gameListener.getGame().getFrameCount(), UnitType.Terran_Supply_Depot, myUnit));
 		}
 	}
 

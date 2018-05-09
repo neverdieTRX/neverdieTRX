@@ -9,7 +9,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="Micro"/>
+			<item value="BWMIRROR"/>
 			<item value="TRX-Bot"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -34,6 +34,20 @@
 		<list key="issueManagementUrl">
 		</list>
 	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\marcu\git\neverdieTRX"/>
+			<item value="C:\Users\marcu\git\neverdieTRX\TRX-Bot"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
@@ -47,6 +61,7 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="BWMIRROR"/>
 			<item value="Micro"/>
 			<item value="ArmyMovement"/>
 			<item value="Macro"/>
@@ -65,24 +80,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.Micro"/>
-			<item value="org.ArmyMovement"/>
-			<item value="org.Macro"/>
-			<item value="org.Info"/>
-			<item value="org.DecisionMaker"/>
-			<item value="org.TRX.bwapi.Facade"/>
+			<item value="org.BWMIRROR"/>
 		</list>
 		<list key="groupId">
 			<item value="TRX"/>
-			<item value="TRX-bwapi-Facade"/>
 		</list>
 		<list key="artifactId">
-			<item value="Micro"/>
-			<item value="ArmyMovement"/>
-			<item value="Macro"/>
-			<item value="Info"/>
-			<item value="DecisionMaker"/>
-			<item value="TRX-bwapi-Facade"/>
+			<item value="BWMIRROR"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

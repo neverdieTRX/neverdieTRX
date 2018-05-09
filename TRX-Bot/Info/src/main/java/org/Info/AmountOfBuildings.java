@@ -25,10 +25,6 @@ public class AmountOfBuildings {
 
 	private Map<UnitType, Integer> amountOfBuildingsCurrent;
 
-	public Map<UnitType, Integer> getAmountOfBuildingsToBe() {
-		return amountOfBuildingsToBe;
-	}
-
 	@PostConstruct
 	private void init() {
 		this.amountOfBuildingsToBe = new HashMap<UnitType, Integer>();
@@ -39,19 +35,14 @@ public class AmountOfBuildings {
 
 	public void onUnitComplete(@Observes OnUnitCompleteEvent onUnitComleteEvent) {
 		Unit createdUnit = onUnitComleteEvent.getCompletedUnit();
-		if (createdUnit.getType().isBuilding() == false) {
-			return;
-		}
-		if (createdUnit.getType().getRace().equals(Race.Terran) == false) {
-			return;
-		}
 		if (!createdUnit.getPlayer().equals(this.gameListener.getSelf())) {
 			return;
 		}
-
+		if (createdUnit.getType().isBuilding() == false) {
+			return;
+		}
 		int newAmount = 1;
 		if (this.amountOfBuildingsCurrent.containsKey(createdUnit.getType())) {
-			System.out.println("actually seting new stuff");
 			newAmount = this.amountOfBuildingsCurrent.get(createdUnit.getType()) + 1;
 		}
 		this.amountOfBuildingsCurrent.put(createdUnit.getType(), newAmount);
@@ -76,5 +67,7 @@ public class AmountOfBuildings {
 	public void setAmountOfBuildingCurrent(UnitType unitType, Integer amount) {
 		this.amountOfBuildingsCurrent.put(unitType, amount);
 	}
-
+	public Map<UnitType, Integer> getAmountOfBuildingsToBe() {
+		return amountOfBuildingsToBe;
+	}
 }

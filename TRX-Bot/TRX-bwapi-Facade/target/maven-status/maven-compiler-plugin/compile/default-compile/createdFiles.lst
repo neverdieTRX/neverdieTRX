@@ -1,8 +1,0 @@
-org\TRX\bwapi\Facade\Events\OnUnitCreateEvent.class
-org\TRX\bwapi\Facade\Events\OnFrameEvent.class
-org\TRX\bwapi\Facade\GameListener.class
-org\TRX\bwapi\Facade\manager\UnitManager.class
-org\TRX\bwapi\Facade\manager\BuildingManager.class
-org\TRX\bwapi\Facade\manager\WorkerManager.class
-org\TRX\bwapi\Facade\Events\OnUnitDestroyEvent.class
-org\TRX\bwapi\Facade\Utils\BuildOrder.class

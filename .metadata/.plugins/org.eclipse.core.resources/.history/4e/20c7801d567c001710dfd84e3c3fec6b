@@ -1,8 +1,0 @@
-package org.Info;
-
-import javax.inject.Named;
-
-@Named
-public class CurrentGameInfo {
-
-}

@@ -19,22 +19,22 @@ import bwapi.UnitType;
 public class BuildingProductionManager {
 
 	@Inject
-	GameListener gameListener;
+	private GameListener gameListener;
 
 	@Inject
-	WorkerManager workerManager;
+	private WorkerManager workerManager;
 
 	@Inject
-	OrderHandler orderHandler;
+	private OrderHandler orderHandler;
 
 	@Inject
-	BuildingManager buildingManager;
+	private BuildingManager buildingManager;
 
 	@Inject
-	AmountOfBuildings amountOfBuildings;
+	private AmountOfBuildings amountOfBuildings;
 
 	@Inject
-	CurrentGameInfo currentGameInfo;
+	private CurrentGameInfo currentGameInfo;
 
 	private int lastUpdated;
 

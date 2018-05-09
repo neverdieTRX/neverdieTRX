@@ -1,9 +1,0 @@
-package org.TRX.bwapi.Facade.manager;
-
-public class WorkerManager {
-
-	public void getFreeWorker() {
-
-	}
-
-}

@@ -1,8 +1,0 @@
-package org.Macro;
-
-public class MakroController {
-	@Inject
-	BasicProductionManager basicProductionManager;
-	
-
-}

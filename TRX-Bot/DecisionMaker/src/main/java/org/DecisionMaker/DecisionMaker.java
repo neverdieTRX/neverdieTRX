@@ -29,14 +29,15 @@ public class DecisionMaker {
 	BasicMacroManager basicMacroManager;
 	private int decisionTimer;
 
+
 	@PostConstruct
 	private void init() {
 		this.decisionTimer = 0;
+		this.amountOfBuildings.setAmountOfBuildingToBe(UnitType.Terran_Barracks, 4);
 	}
 
 	public void run() {
 		this.gameListener.run();
-
 	}
 
 	public void onFrame(@Observes OnFrameEvent onFrameEvent) {
@@ -46,19 +47,9 @@ public class DecisionMaker {
 			this.doDecisions();
 			this.decisionTimer = this.gameListener.getGame().getFrameCount();
 		}
-
 	}
 
-	boolean initbarracks = false;
 
 	private void doDecisions() {
-		if (initbarracks == false) {
-			if (this.amountOfBuildings.getAmountOfBuildingCurrent(UnitType.Terran_Supply_Depot) > 0) {
-				this.amountOfBuildings.setAmountOfBuildingToBe(UnitType.Terran_Barracks, 4);
-				this.initbarracks = true;
-			}
-		}
-
 	}
-
 }

@@ -1,6 +1,0 @@
-package org.TRX.integration;
-
-@Named
-public class SimpleService {
-
-}

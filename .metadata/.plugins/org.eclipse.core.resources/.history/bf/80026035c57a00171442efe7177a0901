@@ -1,5 +1,0 @@
-package org.TRX.bwapi.Facade.Utils;
-
-public enum OrderType {
-
-}
